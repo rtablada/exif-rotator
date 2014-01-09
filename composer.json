@@ -1,0 +1,21 @@
+{
+    "name": "rtablada/exif",
+    "description": "A package for dealing with exif image orientation",
+    "authors": [
+        {
+            "name": "Ryan Tablada",
+            "email": "ryan.tablada@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "imagine/imagine": "~0.5.0",
+        "illuminate/support": "4.1.x"
+    },
+    "autoload": {
+        "psr-0": {
+            "Rtablada\\Exif": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
