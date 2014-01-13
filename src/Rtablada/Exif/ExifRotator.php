@@ -61,7 +61,11 @@ class ExifRotator
 	protected function setExif()
 	{
 		$this->determineFilePath();
-		$this->exif = exif_read_data($this->path);
+		if (in_array($this->file->getExtension(), array('jpg', 'jpeg', 'tiff', 'tif'))) {
+			$this->exif = exif_read_data($this->path);
+		} else {
+			$this->exif = array();
+		}
 	}
 
 	/**
