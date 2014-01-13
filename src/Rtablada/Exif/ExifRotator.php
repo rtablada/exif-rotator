@@ -1,6 +1,7 @@
 <?php namespace Rtablada\Exif;
 
 use Imagine\Image\ImagineInterface;
+use Log;
 
 class ExifRotator
 {
@@ -61,6 +62,8 @@ class ExifRotator
 	protected function setExif()
 	{
 		$this->determineFilePath();
+		Log::info($this->file->getExtension());
+
 		if (in_array($this->file->getExtension(), array('jpg', 'jpeg', 'tiff', 'tif'))) {
 			$this->exif = exif_read_data($this->path);
 		} else {
