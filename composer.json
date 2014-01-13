@@ -12,6 +12,7 @@
         "imagine/imagine": "~0.5.0",
         "illuminate/support": "4.1.x"
     },
+    "license": "MIT",
     "autoload": {
         "psr-0": {
             "Rtablada\\Exif": "src/"
