@@ -1,7 +1,7 @@
 EXIF Based Auto Rotation
 ---
 
-This is a simple Imagine Filter to allow you to resize and pad images with whitespace to ensure consistent sizing without cropping or stretching.
+This is a simple class that allows you to auto-rotate your images based on EXIF data imbedded in JPG and TIFF images.
 
 ## Installing
 
