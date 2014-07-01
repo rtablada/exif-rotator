@@ -1,6 +1,7 @@
 <?php namespace Rtablada\Exif;
 
 use Imagine\Image\ImagineInterface;
+use Codesleeve\Stapler\File\UploadedFile;
 use Log;
 
 class ExifRotator
@@ -82,7 +83,8 @@ class ExifRotator
 	 */
 	protected function determineFilePath()
 	{
-		if ($this->file instanceof \SplFileInfo) {
+		dd(method_exists($this->file, 'getRealPath'));
+		if ($this->file instanceof \SplFileInfo || $this->file instanceof UploadedFile) {
 			$this->path = $this->file->getRealPath();
 		} else {
 			$this->path = $this->file;
