@@ -83,7 +83,6 @@ class ExifRotator
 	 */
 	protected function determineFilePath()
 	{
-		dd(method_exists($this->file, 'getRealPath'));
 		if ($this->file instanceof \SplFileInfo || $this->file instanceof UploadedFile) {
 			$this->path = $this->file->getRealPath();
 		} else {
