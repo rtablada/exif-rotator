@@ -16,7 +16,7 @@ Then call `rotate` and you will be returned an auto-rotated image based on the E
 $imagine = new \Imagine\GD\Imagine;
 $rotator = new \Rtablada\Exif\ExifRotator($pathToFile, $imagine);
 
-$output = $resizer->rotate();
+$output = $rotator->rotate();
 $output->save($outputPath);
 ```
 
