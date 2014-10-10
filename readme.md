@@ -30,7 +30,7 @@ $this->hasAttachedFile('avatar', [
 	'styles' => [
 		'medium' => '300x300',
 		'thumb' => function($file, $imagine) {
-			$resizer = \Rtablada\Images\ResizeAndPad($file, $imagine);
+			$resizer = \Rtablada\Exif\ExifRotator($file, $imagine);
 			return $resizer->rotate();
 		}
 	]
@@ -42,5 +42,5 @@ $this->hasAttachedFile('avatar', [
 If you would like to quickly rotate an image you can use `makeAndRotate` which skips the step of having to instantiate the rotator:
 
 ```php
-\Rtablada\Images\ResizeAndPad::makeAndRotate($file, $imagine)->save($output);
+\Rtablada\Exif\ExifRotator::makeAndRotate($file, $imagine)->save($output);
 ```
